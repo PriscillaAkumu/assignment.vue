@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Bulb is on</title>
+</head>
+<body>
+<div id="app">
+    <div class="container">
+         <div class="bulb">
+            <h2>{{title}}</h2>
+            <img v-if="bulb" src="./img/offbulb.jpg">
+            <img v-else="bulb" src="./img/onbulb.jpg">
+            
+        </div>
+        
+
+        <br>
+        <button v-on:click="Turn()" class="btn btn-lg btn-secondary">Turn{{bulb? 'off' : 'on' }}</button>
+        <!-- <button @click="Turn()">Turn</button> -->
+        
+    </div>
+</div>
+
+    <!--connecting vue locally-->
+    <script src="./vue.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>
